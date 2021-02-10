@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "CasoPracticoAng10"
+    }
+  },
+  "defaultProject": "CasoPracticoAng10",
+  "cli": {
+    "analytics": "0e222a35-cddc-48db-b873-832fc0280849"
+  }
 }
