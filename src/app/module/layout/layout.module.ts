@@ -11,6 +11,8 @@ import { HeaderAdminComponent } from './components/header-admin/header-admin.com
 import { FooterAdminComponent } from './components/footer-admin/footer-admin.component';
 import { SuscribeFormComponent } from './components/suscribe-form/suscribe-form.component';
 
+import { sharedModule } from 'src/app/shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { SuscribeFormComponent } from './components/suscribe-form/suscribe-form.
   ],
   imports: [
     CommonModule,
-    LayoutRoutingModule
+    LayoutRoutingModule,
+    sharedModule,
   ]
 })
 export class LayoutModule { }

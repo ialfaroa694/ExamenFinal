@@ -11,5 +11,4 @@ export class CourseListPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

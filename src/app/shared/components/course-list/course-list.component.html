@@ -1,0 +1,19 @@
+<div class="card-group"> 
+    <div *ngFor="let course of varcourse">
+        <div class="card" style="width: 22rem;">
+            <div class="card-body">
+                <img [src]="course.image" [width]="80" [height]="80" >
+                <h5 class="card-title">{{ course.name }}</h5>
+                <p class="card-text">{{ course.language }}</p>
+                <p class="card-text">{{ course.price }}</p>
+                <p class="card-text">{{ course.duration }}</p>
+                <p class="card-text">{{ course.lessons }}</p>
+                <p class="card-text">{{ course.deadline }}</p>
+                <p class="card-text">{{ course.students }}</p>
+                <p class="card-text">{{ course.instructor }}</p>
+                <p class="card-text">{{ course.category }}</p>       
+                <p class="card-text">{{ course.featured }}</p>
+            </div>
+        </div>    
+    </div>
+</div>
