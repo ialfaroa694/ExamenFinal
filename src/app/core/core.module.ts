@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { NotFountPageComponent } from './pages/not-fount-page/not-fount-page.component';
 
 @NgModule({
-  declarations: [NotFoundPageComponent],
+  declarations: [NotFountPageComponent],
   imports: [
     CommonModule    
   ]

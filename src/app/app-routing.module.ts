@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { NotFountPageComponent } from './core/pages/not-fount-page/not-fount-page.component';
 
 const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./module/layout/layout.module').then(m => m.LayoutModule)
   },
-  /*La página de control de Errores se implementará en el punto 1(e)*/
+  {
+    path: '**',
+    component: NotFountPageComponent
+  },
 ];
 
 @NgModule({
