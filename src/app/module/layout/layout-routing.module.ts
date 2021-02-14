@@ -7,7 +7,7 @@ import { LayoutComponent } from './pages/layout/layout.component';
 const routes: Routes = [
   {
     path: '',
-    /*component: LayoutComponent,*/ /*Se implementará en el punto 1(d) del caso práctico*/
+    component: LayoutComponent,
     children: [
       {
         path: '',
