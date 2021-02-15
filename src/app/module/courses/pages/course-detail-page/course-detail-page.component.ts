@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-course-detail-page',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseDetailPageComponent implements OnInit {
 
-  constructor() { }
+  courseId: number;
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe(
+      (params: Params) => {
+        this.courseId = this.getBookId(params);
+      }
+    );
+  }
+
+  getBookId(params: Params): number {
+    return Number(params.id);
   }
 
 }

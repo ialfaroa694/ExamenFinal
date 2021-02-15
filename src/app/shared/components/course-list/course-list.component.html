@@ -13,6 +13,11 @@
                 <p class="card-text">{{ course.instructor }}</p>
                 <p class="card-text">{{ course.category }}</p>       
                 <p class="card-text">{{ course.featured }}</p>
+                <p class="text-center">                    
+                    <a [routerLink]="['/courses', course.id]">
+                        View Datail Course ->
+                       </a>
+                </p>
             </div>
         </div>    
     </div>
