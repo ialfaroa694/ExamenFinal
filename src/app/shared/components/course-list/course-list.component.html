@@ -1,5 +1,5 @@
 <div class="card-group"> 
-    <div *ngFor="let course of varcourse">
+    <div class="col-md-{{ classShowCourse }}" *ngFor="let course of varcourse">
         <div class="card" style="width: 22rem;">
             <div class="card-body">
                 <img [src]="course.image" [width]="80" [height]="80" >

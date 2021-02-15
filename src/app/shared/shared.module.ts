@@ -4,10 +4,11 @@ import { RouterModule } from '@angular/router';
 
 import { CourseService } from './service/course/course.service';
 import { CourseListComponent } from './components/course-list/course-list.component';
+import { CourseMockService } from './service/course/course-mock.service';
 
 @NgModule({
   declarations: [
-    CourseListComponent
+    CourseListComponent,
   ],
   imports: [
     CommonModule,
@@ -17,7 +18,7 @@ import { CourseListComponent } from './components/course-list/course-list.compon
     CourseListComponent,
   ],
   providers: [
-    {provide: CourseService},
+    CourseService,
   ]
 })
 export class sharedModule { } // tslint:disable-line

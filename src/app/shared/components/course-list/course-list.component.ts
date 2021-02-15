@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ICourseContainer } from '../../Interfaces/course';
-import { CourseContainerData } from '../../mocks/course.mock';
 import { CourseService } from '../../service/course/course.service';
 
 @Component({
@@ -10,17 +9,29 @@ import { CourseService } from '../../service/course/course.service';
 })
 export class CourseListComponent implements OnInit {
 
+  @Input() isFeatured = true;
+  @Input() showCourses = 4;
+
   varcourse: ICourseContainer[];
+
+  classShowCourse: number;
+
   constructor(
-    private courseServ: CourseService
-    ) { }
+      private courseServ: CourseService
+    ) {
+    }
 
   ngOnInit(): void {
-     this.varcourse = this.fetchCourses();
+    this.fetchCourses();
+    this.classShowCourse = 12 / this.showCourses;
   }
 
-  fetchCourses(): ICourseContainer[]{
-    console.log(this.varcourse);
-    return CourseContainerData;
+  fetchCourses(): void {
+    if(this.isFeatured){ // tslint:disable-line
+      this.varcourse = this.courseServ.getFeaturedCourses();
+    }else{
+      this.varcourse = this.courseServ.getCourses();
+    }
   }
+
 }
